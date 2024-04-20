@@ -1,6 +1,8 @@
 import express from "express";
 const app = express(); 
-const PUERTO = 8080; 
+const PUERTO = 8080;
+import clientesRouter from "./routes/clientes.router.js";
+
 
 //Expresiones regulares: son herramientas que nos permiten validar diferentes patrones en algunas cadenas de texto. 
 
@@ -15,3 +17,22 @@ const patronCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 //console.log(patronCorreo.test(correoIngresado));
 console.log(patronCorreo.test(correoFalso));
+
+//NUMERO TELEFONO: 
+
+//Esperamos este formato: (xxx) xxx-xxxx
+
+const patronTelefono = /\(\d{3}\) \d{3}-\d{4}/;
+let telefonoIngresado = "(223) 669-1111";
+
+console.log("Verificamos un tel: " + patronTelefono.test(telefonoIngresado));
+
+//Restringiendo Parámetros: 
+//Rutas
+app.use("/clientes", clientesRouter);
+
+
+//Listen
+app.listen(PUERTO, () => {
+    console.log(`Conectado al servidor en http://localhost:${PUERTO}`);
+  });

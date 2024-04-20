@@ -6,7 +6,7 @@ empieza en ----------------------------- 02:44
 
 patrón correo electrónico -------------- 02:50
 patron telefono ------------------------ 02:56
-
+rutas con parametros del usuario ------- 03:
 
 dejé en 03:00
 
