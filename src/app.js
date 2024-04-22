@@ -31,6 +31,11 @@ console.log("Verificamos un tel: " + patronTelefono.test(telefonoIngresado));
 //Rutas
 app.use("/clientes", clientesRouter);
 
+//¿Que hacer con todas las rutas que no coinciden con ningún endpoint? 
+
+app.get("*", (req, res) => {
+  res.status(404).send({message: "Recurso no encontrado"});
+})
 
 //Listen
 app.listen(PUERTO, () => {

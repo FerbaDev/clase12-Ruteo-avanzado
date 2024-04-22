@@ -6,9 +6,13 @@ empieza en ----------------------------- 02:44
 
 patrón correo electrónico -------------- 02:50
 patron telefono ------------------------ 02:56
-rutas con parametros del usuario ------- 03:
+rutas con parametros del usuario ------- 03:05
+ruta con mail de parametro ------------- 03:12
+rutas que no coinciden con endpoint ---- 03:16
 
-dejé en 03:00
+
+
+dejé en 03:14
 
 
 
