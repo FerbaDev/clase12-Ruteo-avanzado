@@ -2,6 +2,8 @@ import express from "express";
 const app = express(); 
 const PUERTO = 8080;
 import clientesRouter from "./routes/clientes.router.js";
+import UserRouter from "./routes/user.router.js";
+const userRouter = new UserRouter();
 
 
 //Expresiones regulares: son herramientas que nos permiten validar diferentes patrones en algunas cadenas de texto. 
@@ -30,6 +32,7 @@ console.log("Verificamos un tel: " + patronTelefono.test(telefonoIngresado));
 //Restringiendo Parámetros: 
 //Rutas
 app.use("/clientes", clientesRouter);
+app.use("/users", userRouter.getRouter());
 
 //¿Que hacer con todas las rutas que no coinciden con ningún endpoint? 
 
